@@ -1,5 +1,5 @@
 package splitwise.app.group;
 
-public class GroupDisplay {
+public class GroupDisplay {	
 
 }
