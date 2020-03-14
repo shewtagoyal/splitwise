@@ -1,15 +1,16 @@
 package splitwise.app.expense;
 
-import java.util.List;
+import java.math.BigDecimal;
+import java.util.Map;
 
 import splitwise.app.group.Group;
 import splitwise.app.user.Member;
 
-public class Expense {
+public abstract class Expense {
 	
 	private String description;
-	private double amount;
-	private Member paidBy;
+	protected double amount;
+	protected Member paidBy;
 	private SplitType splitType;
 	public Expense(String description, double amount, Member paidBy, SplitType splitType) {
 		this.description = description;
@@ -35,5 +36,10 @@ public class Expense {
 	public SplitType getSplitType() {
 		return splitType;
 	}
+	
+	public abstract Map<Member,BigDecimal> calculateAmountSpentOnEachMemberAfterSplit(Group group); 
+	
+	
+
 	
 }

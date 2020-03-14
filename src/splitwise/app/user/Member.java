@@ -16,6 +16,18 @@ public class Member {
 		this.name = name;
 	}
 
+
+	public int getId() {
+		return memberId;
+	}
+
+
+	public String getName() {
+		return name;
+	}
+	
+	
+
 	
 	
 

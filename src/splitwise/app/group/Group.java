@@ -1,15 +1,17 @@
 package splitwise.app.group;
+import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
-import splitwise.app.expense.Expense;
-import splitwise.app.expense.SplitType;
 import splitwise.app.user.Member;
 public class Group {
 
 	private int groupId;
 	private String GroupName;
-	private List<Member> members;
-	private List<Expense> expenses;
+	private List<Member> members=new ArrayList<>();
+	private Map<Member,BigDecimal> m=new HashMap<>();
 	
 	public Group(int id,String name) {
 		this.groupId=id;
@@ -22,22 +24,16 @@ public class Group {
 	public void addMember(Member member) {
 		this.members.add(member);
 	}
-		public void addExpense(Expense expense) {
-			this.expenses.add(expense);
-		}
+
 		
-		 public double calculateBalanceOfEachMember() {
-			 List<Member> members=getMembers();
-				int noOfMembers=members.size();
-				double balance = 0;
-			 if(this.splitType==SplitType.EQUAL) {
-				balance =amount/noOfMembers;			
-			 }
-			 if(this.splitType==SplitType.EXACT) {
-				 balance=amount;
-			 }
-			 return balance;
-		 }
+		
+			}
+			
+				
+		
+
+
+		
+			
 		 
-	}
 
